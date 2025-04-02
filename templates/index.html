@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/static/icegif-158.gif" alt="Car Icon" class="header-icon">
+            <h1>Car Price Prediction</h1>
+        </div>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="brand">Car Brand:</label>
+                <select name="brand" id="brand" required>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Maruti">Maruti Suzuki</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Tata">Tata</option>
+                    <option value="Kia">Kia</option>
+                    <option value="Mahindra">Mahindra</option>
+                    <option value="Renault">Renault</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes">Mercedes-Benz</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Skoda">Skoda</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Chevrolet">Chevrolet</option>
+                    <option value="Jeep">Jeep</option>
+                    <option value="Datsun">Datsun</option>
+                    <option value="MG">MG Motor</option>
+                    <option value="Fiat">Fiat</option>
+                    <option value="Suzuki">Suzuki</option>
+                    <option value="Land Rover">Land Rover</option>
+                    <option value="Jaguar">Jaguar</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="Volvo">Volvo</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="year">Year: <span id="yearValue">2020</span></label>
+                <input type="range" name="year" id="year" min="1990" max="2025" value="2020" 
+                       oninput="document.getElementById('yearValue').innerText = this.value">
+            </div>
+
+            <div class="form-group">
+                <label for="km_driven">KM Driven: <span id="kmValue">50000</span></label>
+                <input type="range" name="km_driven" id="km_driven" min="0" max="500000" value="50000" 
+                       oninput="document.getElementById('kmValue').innerText = this.value">
+            </div>
+
+            <div class="form-group">
+                <label for="fuel_type">Fuel Type:</label>
+                <select name="fuel_type" id="fuel_type" required>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="CNG">CNG</option>
+                    <option value="LPG">LPG</option>
+                    <option value="Electric">Electric</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="seller_type">Seller Type:</label>
+                <select name="seller_type" id="seller_type" required>
+                    <option value="Individual">Individual</option>
+                    <option value="Dealer">Dealer</option>
+                    <option value="Trustmark Dealer">Trustmark Dealer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="transmission">Transmission:</label>
+                <select name="transmission" id="transmission" required>
+                    <option value="Manual">Manual</option>
+                    <option value="Automatic">Automatic</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="owner_type">Owner Type:</label>
+                <select name="owner_type" id="owner_type" required>
+                    <option value="First">First</option>
+                    <option value="Second">Second</option>
+                    <option value="Third">Third</option>
+                    <option value="Fourth">Fourth</option>
+                    <option value="Fifth & Above">Fifth & Above</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mileage">Mileage (kmpl): <span id="mileageValue">15</span></label>
+                <input type="range" name="mileage" id="mileage" min="5" max="40" value="15" 
+                       oninput="document.getElementById('mileageValue').innerText = this.value">
+            </div>
+
+            <div class="form-group">
+                <label for="engine_cc">Engine (cc): <span id="engineValue">1500</span></label>
+                <input type="range" name="engine_cc" id="engine_cc" min="500" max="5000" value="1500" 
+                       oninput="document.getElementById('engineValue').innerText = this.value">
+            </div>
+
+            <div class="form-group">
+                <label for="max_power">Max Power (bhp): <span id="powerValue">100</span></label>
+                <input type="range" name="max_power" id="max_power" min="50" max="500" value="100" 
+                       oninput="document.getElementById('powerValue').innerText = this.value">
+            </div>
+
+            <div class="form-group">
+                <label for="seats">Seats: <span id="seatsValue">5</span></label>
+                <input type="range" name="seats" id="seats" min="2" max="12" value="5" 
+                       oninput="document.getElementById('seatsValue').innerText = this.value">
+            </div>
+
+            <button type="submit">Check Price</button>
+        </form>
+
+        {% if show_result %}
+        <div class="result">
+            <h2>Prediction Result</h2>
+            <p><strong>Brand:</strong> {{ data.brand }}</p>
+            <p><strong>Year:</strong> {{ data.year }}</p>
+            <p><strong>KM Driven:</strong> {{ data.km_driven }}</p>
+            <p><strong>Fuel Type:</strong> {{ data.fuel_type }}</p>
+            <p><strong>Seller Type:</strong> {{ data.seller_type }}</p>
+            <p><strong>Transmission:</strong> {{ data.transmission }}</p>
+            <p><strong>Owner Type:</strong> {{ data.owner_type }}</p>
+            <p><strong>Mileage:</strong> {{ data.mileage }} kmpl</p>
+            <p><strong>Engine:</strong> {{ data.engine_cc }} cc</p>
+            <p><strong>Max Power:</strong> {{ data.max_power }} bhp</p>
+            <p><strong>Seats:</strong> {{ data.seats }}</p>
+            <p class="price"><strong>Predicted Price:</strong> Rs {{ prediction }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

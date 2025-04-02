@@ -1,0 +1,32 @@
+brand,year,km_driven,fuel_type,seller_type,transmission,owner_type,mileage,engine_cc,max_power,seats,price
+Toyota,2022,10000,Petrol,Dealer,Automatic,First,18.0,1498,103,5,900000
+Toyota,2015,120000,Petrol,Individual,Manual,Second,15.8,1498,103,5,350000
+Honda,2021,20000,Diesel,Dealer,Automatic,First,20.0,1597,118,5,1000000
+Honda,2010,150000,Diesel,Individual,Manual,Third,17.5,1597,118,5,250000
+Ford,2019,50000,Petrol,Dealer,Manual,First,16.0,1497,121,5,600000
+Ford,2005,200000,Petrol,Individual,Manual,Fourth,14.2,1497,121,5,150000
+Hyundai,2023,5000,Petrol,Dealer,Automatic,First,17.0,1197,83,5,700000
+Hyundai,2012,100000,CNG,Individual,Manual,Second,19.0,1197,83,5,200000
+Maruti,2020,30000,CNG,Dealer,Manual,First,22.0,998,67,5,450000
+Maruti,2000,250000,Petrol,Individual,Manual,Fifth & Above,18.0,998,67,5,80000
+Volkswagen,2021,25000,Petrol,Dealer,Manual,First,18.5,999,110,5,650000
+Tata,2018,80000,Diesel,Individual,Manual,Second,20.5,1248,74,7,400000
+Kia,2022,15000,Petrol,Dealer,Automatic,First,15.5,1497,113,5,850000
+Mahindra,2017,90000,Diesel,Individual,Manual,Third,16.8,1493,100,7,300000
+Renault,2019,60000,Petrol,Individual,Manual,First,19.0,1199,85,5,450000
+BMW,2023,10000,Petrol,Dealer,Automatic,First,12.0,1998,248,5,3000000
+Mercedes,2020,40000,Diesel,Dealer,Automatic,Second,15.0,1950,191,5,2000000
+Audi,2018,50000,Petrol,Dealer,Automatic,First,14.5,1984,188,5,1500000
+Skoda,2021,20000,Petrol,Individual,Manual,First,18.5,1498,148,5,800000
+Nissan,2016,100000,Diesel,Trustmark Dealer,Manual,Third,19.0,1461,108,5,350000
+Chevrolet,2014,120000,Petrol,Individual,Manual,Fourth,16.0,1399,92,5,200000
+Jeep,2022,30000,Diesel,Dealer,Automatic,First,14.0,1956,168,5,1200000
+Datsun,2017,70000,Petrol,Individual,Manual,Second,20.0,1198,67,5,250000
+MG,2023,15000,Petrol,Dealer,Automatic,First,15.5,1498,141,5,900000
+Fiat,2015,85000,Diesel,Individual,Manual,Third,17.0,1248,74,5,300000
+Suzuki,2020,35000,Petrol,Individual,Manual,First,21.0,1197,82,5,500000
+Land Rover,2021,25000,Diesel,Dealer,Automatic,First,12.5,1997,201,5,3500000
+Jaguar,2019,40000,Petrol,Dealer,Automatic,Second,13.0,1997,246,5,2500000
+Porsche,2022,10000,Petrol,Dealer,Automatic,First,10.0,2995,375,4,5000000
+Volvo,2020,30000,Electric,Dealer,Automatic,First,0.0,0,402,5,3000000
+Toyota,1995,300000,LPG,Individual,Manual,Fifth & Above,14.0,1498,100,5,100000
