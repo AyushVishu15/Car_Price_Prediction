@@ -12,3 +12,4 @@ A Flask-based web application that predicts used car prices in INR using a Rando
    ```bash
    git clone https://github.com/AyushVishu15/Car_Price_Prediction.git
 ![image](https://github.com/user-attachments/assets/3a1a73f4-0505-4814-bc03-dc93950e38ce)
+![image](https://github.com/user-attachments/assets/9e013f26-806f-4514-9e5f-be4c4ab2ad6f)
